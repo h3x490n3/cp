@@ -1,0 +1,23 @@
+E. Lucky numbers
+
+A number is called almost lucky if it could be evenly divided by some lucky number.
+A lucky number is a number whose decimal representation contains only the digits 4 and 7
+eg: 47, 744, 4 are lucky numbers and 467, 17 are not.
+
+let n be our number.
+let l be the length of n.
+
+First we need to implement a validator that returns True if a given number is lucky and False if it isn't.
+A number is lucky if:
+	- The occurence of the digit 4 in n equals l. (eg: n=444, l=3, count(4) = 3 = l)
+or	
+	- The occurence of the digit 7 in n equals l. (eg: n=7777, l=4, count(7) = 4 = l)
+or	
+	- The occurence of the digit 7 plus the occurence of the digit 4 equals l. (eg: n=4747, l=4, count(4)=2,
+		count(7)=2, count(7)+count(4) = 4 = l)
+
+let i be our iterator
+
+Next we need to run every divisor of n through the validator, to do that we will loop through every number
+between 1 and n inclusive. if the rest of the division (n / i) equals 0 thus i is a divisor, if i is a lucky
+number, we found our answer.
