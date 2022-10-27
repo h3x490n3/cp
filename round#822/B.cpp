@@ -15,12 +15,7 @@
 
 using namespace std;
 
-#define ll unsigned long long 
 
-ll		generate_seq(ll seq_length)
-{
-	
-}
 
 int		main(void)
 {
